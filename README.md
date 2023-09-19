@@ -1,27 +1,48 @@
-# React + TypeScript + Vite
+# WebSocket Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Real-time web chat app powered by [Socket.io](https://socket.io/). 
 
-Currently, two official plugins are available:
+### Technologies Used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- [Vite](https://vitejs.dev/)
+- [Socket.io](https://socket.io/)
 
-## Expanding the ESLint configuration
+### To Run Locally (Needs the download of [WebSocket Back-End](https://github.com/Riccardo9190/webSocket-backend))
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Clone this repository with ```git clone https://github.com/Riccardo9190/webSocket-frontend.git```
 
-- Configure the top-level `parserOptions` property like this:
+- Access the app folder with ```cd webSocket-frontend```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- Install all dependencies with ```npm install```
+
+- Set the environment variable to connect with [WebSocket Back-End](https://github.com/Riccardo9190/webSocket-backend):
+```shell
+echo "VITE_API_URL=http://localhost:3000" > .env
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Run the app with ```npm run dev``` and open the URL ```localhost:5173```
+
+<hr/>
+
+### How it Works?
+
+In this web chat app, multiple users can engage simultaneously. For this example, we will use two users:
+
+<img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/home.png"/>
+
+After creating a user, we are directed to the topics page. It will initially be empty, as there are no topics on first use. However, next time the topics will persist even if you close the app. In this example, we will create a topic to discuss NodeJs:
+
+<img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/topics1.png"/>
+
+After clicking the 'Criar' button, our first topic room appears in the topics list:
+
+<img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/topics2.png"/>
+
+In the topic room, you can engage in real-time chat with other users! You can also view the timestamps of their messages and when they join the topic discussion:
+
+<img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/chat1.png"/>
+
+You can also observe when a user has left the topic discussion:
+
+<img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/chat2.png"/>
