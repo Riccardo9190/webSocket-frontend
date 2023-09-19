@@ -1,6 +1,6 @@
 # WebSocket Front-End
 
-Real-time web chat app powered by [Socket.io](https://socket.io/). 
+Real-time web chat app using WebSocket protocol.
 
 ### Technologies Used:
 
