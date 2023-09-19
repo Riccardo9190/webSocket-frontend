@@ -31,7 +31,7 @@ In this web chat application, multiple users can engage concurrently in multiple
 
 <img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/home.png"/>
 
-After creating a user, we are directed to the topics page. It will initially be empty, as there are no topics upon first use. However, next time, the topics will persist even if you close the app. In this example, we will create a topic specifically to discuss NodeJs:
+After creating a user, we are directed to the topics page. It will initially be empty, as there are no topics upon first use. However, next time, the topics will persist even if you close the app. In this example, we will create a unique topic, specifically to discuss NodeJs:
 
 <img src="https://github.com/Riccardo9190/webSocket-frontend/blob/master/public/topics1.png"/>
 
